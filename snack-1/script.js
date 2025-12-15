@@ -23,9 +23,6 @@ const bici = [
 ];
 
 
-// Inizializzo il peso minimo con il peso della prima bici
-let pesoMinore = bici[0].peso;
-
 // Inizializzo la bici più leggera con la prima bici dell’array
 let biciPiuLeggera = bici[0];
 
@@ -33,10 +30,7 @@ let biciPiuLeggera = bici[0];
 for (let index = 1; index < bici.length; index++) {
 
     // Se il peso della bici corrente è minore del peso minimo salvato
-    if (bici[index].peso < pesoMinore) {
-
-        // Aggiorno il peso minore
-        pesoMinore = bici[index].peso;
+    if (bici[index].peso < biciPiuLeggera.peso) {
 
         // Aggiorno la bici più leggera
         biciPiuLeggera = bici[index];
