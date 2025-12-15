@@ -29,23 +29,25 @@ const squadre = [
     }
 ];
 
-
 // ciclo sull'array per assegnare valori random
 for (let index = 0; index < squadre.length; index++) {
     squadre[index].puntiFatti = Math.floor(Math.random() * 100);
     squadre[index].falliSubiti = Math.floor(Math.random() * 50);
 }
 
-console.log(squadre[0]);
-
-
 const newArraySquadre = [];
-
 
 for (let index = 0; index < squadre.length; index++) {
 
-    newArraySquadre.push(squadre[index].nome);
-    newArraySquadre.push(squadre[index].falliSubiti);
+    //cosi facendo creo un array di soli valori e non di oggetti
+    // newArraySquadre.push(squadre[index].nome);
+    // newArraySquadre.push(squadre[index].falliSubiti);
+
+    //cosi creo un array di oggetti con solo le proprieta che mi servono
+    newArraySquadre.push({
+        nome: squadre[index].nome,
+        falli: squadre[index].falliSubiti,
+    });
     
 }
 
